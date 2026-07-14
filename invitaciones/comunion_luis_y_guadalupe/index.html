@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="meta-description" name="description" content="">
+    <title id="meta-title"></title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-aos="zoom-in" data-aos-duration="2000">
+            <h2 class="pre-title" id="hero-pre-title"></h2>
+            <h1 class="main-title" id="hero-main-title"></h1>
+            <p class="hero-date" id="hero-date"></p>
+            <div class="scroll-indicator">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+        
+        <audio id="bgMusic" loop>
+            <source src="assets/audio/cancion.mp3" type="audio/mpeg">    
+        </audio>
+    </header>
+
+    <div id="welcome-screen">
+        <img src="assets/img/sobre.png" alt="Abrir invitación" class="envelope-img">
+        <div id="welcomeMessage">Bienvenido <br>✨Primera Comunión✨<br>Luis y Guadalupe</div>
+        <br><br><br><br>
+        <button id="openInvitation" class="seal-btn"><span>Abrir</span></button>
+    </div>
+
+    <!-- Intro Section -->
+    <section class="intro section-padding text-center">
+        <div class="container">
+            <p class="intro-text" id="intro-text" data-aos="fade-up"></p>
+
+            <div class="parents-godparents" id="family-container" data-aos="fade-up" data-aos-delay="200">
+                <!-- Family blocks injected here via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section section-padding text-center" id="countdown-bg">
+        <div class="countdown-overlay"></div>
+        <div class="container relative z-10" data-aos="fade-up">
+            <h2 class="section-title text-white" id="countdown-display-date"></h2>
+            <p class="subtitle text-white" id="countdown-subtitle"></p>
+            <div class="countdown" id="countdown">
+                <div class="time-block">
+                    <span id="days">00</span>
+                    <label>Días</label>
+                </div>
+                <div class="time-block">
+                    <span id="hours">00</span>
+                    <label>Horas</label>
+                </div>
+                <div class="time-block">
+                    <span id="minutes">00</span>
+                    <label>Minutos</label>
+                </div>
+                <div class="time-block">
+                    <span id="seconds">00</span>
+                    <label>Segundos</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations section-padding bg-light text-center">
+        <div class="container">
+            <div class="locations-grid" id="locations-container">
+                <!-- Location cards injected here via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Dress Code Section -->
+    <section class="dress-code section-padding text-center" id="dress-code-bg" style="display: none;">
+        <div class="overlay-dark"></div>
+        <div class="container relative z-10" data-aos="zoom-in">
+            <i class="fa-solid fa-hat-cowboy section-icon text-white"></i>
+            <h2 class="section-title text-white" id="dresscode-title"></h2>
+            <p class="dress-code-text" id="dresscode-text"></p>
+            <p class="dress-code-alert" id="dresscode-alert"></p>
+        </div>
+    </section>
+
+    <!-- Itinerary Section -->
+    <section class="itinerary section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title text-center" id="itinerary-title" data-aos="fade-up"></h2>
+            <div class="timeline" id="itinerary-timeline">
+                <!-- Itinerary items injected here via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gifts Section -->
+    <section class="gifts section-padding text-center" id="gifts-bg" style="display: none;">
+        <div class="overlay-dark"></div>
+        <div class="container relative z-10" data-aos="fade-up">
+            <h2 class="section-title text-white" id="gifts-title"></h2>
+            <i class="fa-solid fa-envelope-open-text gift-icon"></i>
+            <p class="gift-text" id="gifts-text"></p>
+        </div>
+    </section>
+
+    <!-- Messages Section -->
+    <section class="messages section-padding bg-light text-center" style="display: none;">
+        <div class="container" data-aos="zoom-in">
+            <h2 class="section-title" id="messages-title"></h2>
+            <p class="messages-text" id="messages-text"></p>
+            <a href="#" target="_blank" id="messages-btn" class="btn btn-outline"><i class="fa-brands fa-whatsapp"></i>
+                <span id="messages-btn-text"></span></a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+<section class="gallery section-padding bg-dark text-center" style="display: none;">
+    <div class="container">
+        <h2 class="section-title text-white" id="gallery-title"></h2>
+
+        <div class="gallery-slider">
+
+            <button class="gallery-nav prev" id="prevBtn">
+                &#10094;
+            </button>
+
+            <div class="gallery-main">
+                <img id="mainImage" src="" alt="Galería">
+            </div>
+
+            <button class="gallery-nav next" id="nextBtn">
+                &#10095;
+            </button>
+
+        </div>
+
+        <div class="gallery-thumbs" id="gallery-container">
+            <!-- Miniaturas -->
+        </div>
+    </div>
+</section>
+
+    <!-- RSVP Section -->
+    <section class="rsvp section-padding text-center bg-accent text-white">
+        <div class="container" data-aos="fade-up">
+            <h2 class="section-title text-white" id="rsvp-title"></h2>
+            <p class="rsvp-text" id="rsvp-text"></p>
+            <a href="#" target="_blank" id="rsvp-btn" class="btn btn-light">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span id="rsvp-btn-text"></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <p id="footer-copyright"></p>
+        <p class="credit" id="footer-credit"></p>
+        <a href="#" target="_blank" id="footer-btn">
+            <span id="footer-btn-text"></span>
+        </a>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
