@@ -22,7 +22,7 @@ const EVENT_CONFIG = {
             },
             {
                 title: "Mis Padrinos:",
-                names: "Manuel Vargas Concha<br>y<br>Ma. del Carmen Morales Hernández"
+                names: "Manuel Vargas Concha<br>y<br>Ma. Carmen Morales Ramirez"
             }
         ]
     },
@@ -40,7 +40,7 @@ const EVENT_CONFIG = {
         {
             id: "misa",
             title: "Misa",
-            time: "13:30 hrs.",
+            time: "10:00 hrs.",
             description: "Parroquia del Espíritu Santo",
             address: "Lomas de los Luceros S/N, Lomas Residencial Pachuca, Pachuca de Soto, Hgo,",
             mapUrl: "https://maps.app.goo.gl/ELSgGrnz6GwVP42L8",
