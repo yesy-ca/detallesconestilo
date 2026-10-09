@@ -1,0 +1,739 @@
+/* ==========================================================================
+   CSS Variables & Global Styles
+   ========================================================================== */
+:root {
+    --primary-color: #800080; /* Ruby Red */
+    --accent-color: #CFB53B; /* Dark Red */
+    --bg-light: #fdfbfb; /* Off-white */
+    --bg-dark: #eeeaf3; /* Charcoal */
+    --text-dark: #FFD700;
+    --text-light: #FFFFE0;
+    
+    --font-cursive: 'Alex Brush', cursive;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    
+    --transition-smooth: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--text-light) !important;
+}
+
+.bg-light {
+    background-color: var(--bg-light);
+}
+
+.bg-dark {
+    background-color: var(--bg-dark);
+}
+
+.bg-accent {
+    background-color: var(--primary-color);
+}
+
+.section-title {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.relative {
+    position: relative;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 50px;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+}
+
+.btn-light {
+    background-color: var(--text-light);
+    color: var(--primary-color);
+    border: 2px solid var(--text-light);
+}
+
+.btn-light:hover {
+    background-color: transparent;
+    color: var(--text-light);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url('../assets/img/hero_bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-light);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.pre-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: -10px;
+    color: #ffd700; /* Gold touch */
+}
+
+.main-title {
+    font-family: var(--font-cursive);
+    font-size: 6rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+.hero-date {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    font-weight: 300;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    z-index: 2;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0) translateX(-50%); }
+    40% { transform: translateY(-20px) translateX(-50%); }
+    60% { transform: translateY(-10px) translateX(-50%); }
+}
+
+/* ==========================================================================
+   Intro Section
+   ========================================================================== */
+.intro-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-style: italic;
+    color: #555;
+    font-family: var(--font-serif);
+}
+
+.parents-godparents {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.family-block {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.block-title {
+    font-family: var(--font-cursive);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.family-block p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   Countdown Section
+   ========================================================================== */
+.countdown-section {
+    position: relative;
+    background-image: url('../assets/img/countdown_bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.countdown-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.time-block {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.time-block span {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1;
+}
+
+.time-block label {
+    display: block;
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   Locations Section
+   ========================================================================== */
+.locations-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.location-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    transition: var(--transition-smooth);
+}
+
+.location-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.card-img-wrapper {
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.location-card:hover .card-img {
+    transform: scale(1.1);
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.card-title {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.card-time {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.card-desc {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.card-address {
+    color: #777;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Dress Code Section
+   ========================================================================== */
+.dress-code {
+    position: relative;
+    background-image: url('../assets/img/dress_code_bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.overlay-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.section-icon {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.dress-code-text {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.dress-code-alert {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Itinerary Section (Timeline)
+   ========================================================================== */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: var(--primary-color);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    width: 50%;
+    padding-right: 40px;
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-right: 0;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.timeline-item:nth-child(odd) {
+    text-align: right;
+}
+
+.timeline-icon {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    width: 50px;
+    height: 50px;
+    background: var(--bg-light);
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    z-index: 2;
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+    left: -25px;
+}
+
+.timeline-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.timeline-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.timeline-content p {
+    font-weight: 600;
+    color: #555;
+}
+
+/* ==========================================================================
+   Gifts Section
+   ========================================================================== */
+.gifts {
+    position: relative;
+    background-image: url('../assets/img/gifts_bg.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.gift-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin: 20px 0;
+}
+
+.gift-text {
+    color: #fff;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   Messages Section
+   ========================================================================== */
+.messages-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* ==========================================================================
+   Gallery Section
+   ========================================================================== */
+.gallery-slider {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-main {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    background: rgba(0,0,0,.4);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.gallery-nav.prev {
+    left: 15px;
+}
+
+.gallery-nav.next {
+    right: 15px;
+}
+
+.gallery-thumbs {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+
+.gallery-thumb {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    opacity: .6;
+    transition: .3s;
+    border: 3px solid transparent;
+}
+
+.gallery-thumb:hover {
+    opacity: 1;
+}
+
+.gallery-thumb.active {
+    opacity: 1;
+    border-color: #c9a227;
+}
+
+/* ==========================================================================
+   RSVP & Footer
+   ========================================================================== */
+.rsvp-text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.footer {
+    background: var(--bg-dark);
+    color: #999;
+    padding: 30px 0;
+    font-size: 0.9rem;
+}
+
+.credit {
+    margin-top: 10px;
+    color: var(--primary-color);
+    font-family: var(--font-serif);
+    font-style: italic;
+}
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 4rem;
+    }
+    
+    .pre-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 0;
+        text-align: left;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+        padding-left: 80px;
+    }
+    
+    .timeline-item:nth-child(odd) {
+        text-align: left;
+    }
+    
+    .timeline-icon {
+        left: 5px !important;
+    }
+    
+    .time-block {
+        min-width: 80px;
+        padding: 15px;
+    }
+    
+    .time-block span {
+        font-size: 2rem;
+    }
+}
+
+/* ==========================================================================
+   Sobre de bienvenida
+   ========================================================================== */
+#welcome-screen{
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en vertical */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    background: white;
+    gap: 20px;
+}
+
+#openInvitation{
+    transition: .3s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#openInvitation:hover{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.envelope-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.seal-btn{
+    position: absolute;
+    background: transparent;
+    border: none;
+    color: #fff8f0;
+    font-family: var(--font-cursive);
+    text-shadow: 0 1px 2px rgba(0,0,0,.3);
+    font-size: 90px;
+    cursor: pointer;
+}
+
+#welcomeMessage{
+    color:white;
+    font-size:2rem;
+    font-family:'Cormorant Garamond', serif;
+    opacity:0;
+    transition:opacity .6s ease;
+    text-align:center;
+    text-shadow:0 2px 8px rgba(0,0,0,.5);
+    position:absolute;
+}
