@@ -102,7 +102,7 @@ const EVENT_CONFIG = {
     // RSVP Section
     rsvp: {
         title: "¡Confirma tu Asistencia!",
-        text: "Por favor, antes del 14 de Noviembre. ¡Te esperamos!",
+        text: "¡Te esperamos!",
         whatsappNumber: "+527716875244",
         whatsappMessage: "Confirmo mi asistencia. Mi nombre es:",
         buttonText: "Confirmar Asistencia"
